@@ -85,6 +85,9 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>
+			spring-boot-client
+		</finalName>
 	</build>
 
 </project>
