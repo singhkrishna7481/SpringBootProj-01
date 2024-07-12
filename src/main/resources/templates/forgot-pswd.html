@@ -1,0 +1,123 @@
+<!doctype html>
+
+<html lang="en" dir="ltr" xmlns="https://www.thymeleaf.org/">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<title>Forgot Password</title>
+
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+	<section>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+		<span></span> <span></span> <span></span> <span></span> <span></span>
+
+		<div class="signin">
+
+			<div class="content">
+
+				<h2>Reset Password</h2>
+				<form action="send-otp" method="post" th:object="${clientOTP}">
+                    <h4 style="color: greenyellow;" th:text="${otpSent}"></h4>
+                    <h4 style="color: red;" th:text="${errorMsg}"></h4>
+					<div class="form">
+                        <div class="inputBox">
+                            
+                            <input type="email" required th:field="*{cEmail}"> <i>Email</i>
+                            
+						</div>
+                        
+						<div class="inputBox">
+                            
+                            <input type="submit" value="Send OTP">
+                            
+						</div>
+					</div>
+				</form>
+                <form action="verify-otp" method="post" th:object="${clientOTP}">
+                <h4 style="color: red;" th:text="${errorOtp}"></h4>
+					<div class="form">
+					<div class="inputBox">
+
+						<input type="number" required th:field="*{cPswd}"> <i>OTP</i>
+
+					</div>
+
+					<div class="links">
+						<a href="index">Sign In</a> <a href="sign-up">Sign Up</a>
+
+					</div>
+
+					<div class="inputBox">
+
+						<input type="submit" value="Validte OTP">
+
+					</div>
+
+			</div>
+			</form>
+		</div>
+
+		</div>
+
+	</section>
+
+</body>
+
+</html>
